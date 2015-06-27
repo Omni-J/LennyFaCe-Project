@@ -1,3 +1,18 @@
+<head>
+<meta charset="utf-8">
+
+<title>LennyFaCe</title>
+<meta name="description" content="The HTML5 Herald">
+<meta name="author" content="SitePoint">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--Bootstrap Start -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<!-- BS library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<!--Bootstrap end-->
+</head>
 <?php
 	//take the variables from file where we have session_start tag
 	session_unset();
@@ -31,12 +46,7 @@ function test_input($data) {
 ?>
 
 <?php include "headerproekt.php"?>
-<form method="post" action="<?php 
-if (empty($_POST["user"]) or empty($_POST["pass"]))
-{
-	echo htmlspecialchars($_SERVER["PHP_SELF"]);
-} else echo "loginproect.php";
-?>">
+<!-- 
 		
 	
 			<p id = "id1">
@@ -52,8 +62,34 @@ if (empty($_POST["user"]) or empty($_POST["pass"]))
 			<p  id = "id3">
 				<input type  = "submit" name = "Submit" value = "Submit">
 			</p>
+</form> -->
+<form method="post" action="<?php 
+if (empty($_POST["user"]) or empty($_POST["pass"]))
+{
+	echo htmlspecialchars($_SERVER["PHP_SELF"]);
+} else echo "loginproect.php";?>">
+<form class="form-horizontal">
+  <div class="form-group">
+    <label for="id1" class="col-sm-2 control-label">Username</label>
+    <div class="col-sm-10">
+      <input type="text" name="user" maxlength = "7" class="form-control" id="id1" value ="<?php echo $name2;?>" placeholder="Username">
+	  <span class="error"><?php echo $nameerr;?></span>
+	</div>
+  </div>
+  <div class="form-group">
+    <label for="id2" class="col-sm-2 control-label">Password</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" name="pass" maxlength="10" value ="<?php echo $pass2;?>" id="id2" placeholder="Password">
+      <span class="error"><?php echo $passerr;?></span>
+	</div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" name = "Submit" value = "Submit" class="btn btn-default">Sign in</button>
+    </div>
+  </div>
 </form>
-<style>
+<!-- <style>
 	#id1 {
 		position: absolute;
 		top: 36%;
@@ -95,6 +131,6 @@ if (empty($_POST["user"]) or empty($_POST["pass"]))
 			margin-right: 20%;
 			text-align: center;
         }
-	</style>
+	</style> -->
 	
 		<div id = "id9" class="jfott"><p><font color= "#FFFFFF">Lenny FaCe@HackTUES2015</font></p></div>
