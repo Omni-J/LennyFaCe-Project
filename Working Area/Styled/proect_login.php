@@ -1,3 +1,18 @@
+<head>
+<meta charset="utf-8">
+
+<title>LennyFaCe</title>
+<meta name="description" content="The HTML5 Herald">
+<meta name="author" content="SitePoint">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--Bootstrap Start -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<!-- BS library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<!--Bootstrap end-->
+</head>
 <?php
 	//take the variables from file where we have session_start tag
 	session_unset();
@@ -57,27 +72,27 @@ if (empty($_POST["user"]) or empty($_POST["pass"]))
 	#id1 {
 		position: absolute;
 		top: 36%;
-		left:34%;
+		left: 34%;
 		font-size: 125%;
 		color: #FFFFFF;
 	}
 	#id2 {
 		position: absolute;
-		top:45%;
+		top: 50%;
 		left: 34%;
 		font-size: 125%;
 		color: #FFFFFF;
 	}
 	#id3 {
 		position: absolute;
-		top: 52%;
-		left: 50%;
+		top: 65%;
+		left: 34%;
 		font-size: 150%;
 		color: #FFFFFF;
 	}
 	body {
 		background-size : 100%;
-		background: url("image1.jpg") no-repeat center center fixed ; 
+		background: url("LoginBackground.jpg") no-repeat center center fixed ; 
 		background-size: cover;
 	}
 	#id9{
@@ -97,4 +112,4 @@ if (empty($_POST["user"]) or empty($_POST["pass"]))
         }
 	</style>
 	
-		<div id = "id9" class="jfott"><p><font color= "#FFFFFF">Lenny FaCe@HackTUES2015</font></p></div>
+		<div id = "id9" class="jfott"><p><font color= "#FFFFFF">Copyright© Open Text Corporation. All Rights Reserved.</font></p></div>
