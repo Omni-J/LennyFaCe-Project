@@ -55,42 +55,6 @@ function test_input($data) {
 }
 ?>
 
-
-<!--<form method="post" action="<?php 
-if (empty($_POST["user"]) or empty($_POST["pass"]) or !isset($_POST["sex"]) or empty($_POST["city"])) 
-{
-	echo htmlspecialchars($_SERVER["PHP_SELF"]);
-} else echo "session.php";
-?>">
-	 	<p id="user" >
-			Enter your username :
-			<input type="text" name="user" maxlength = "7" value="<?php echo $name1;?>">
-			<span class="error"><?php echo $nameErr;?></span>
-		</p>
-		<p id="pass">
-			Enter your password :
-			<input type="password" name="pass" maxlength = "10" value="<?php echo $pass1;?>">
-			<span class="error"><?php echo $passErr;?></span>
-		</p>
-   
-		<p id="sex">
-			Chooose your sex : 			
-			<input type="radio" name="sex" value="<?php echo sex1;?>Man"> Man
-			<input type="radio" name="sex" value="<?php echo sex1;?>Woman"> Woman 
-			<span class="error"><?php echo $sexErr;?></span>
-		</p>
-				
-		<p id="city">
-			Enter your city :
-			<input type="text" name="city" maxlength = "15" value="<?php echo $city1;?>">
-			<span class="error"><?php echo $cityErr;?></span>
-		</p>
-   
-   
-   <p id="submit" >
-		<input type="submit" name="submit" value="Submit"> 
-   </p>
-</form>-->
 <form class="form-horizontal" action="<?php 
 if (empty($_POST["user"]) or empty($_POST["pass"]) or !isset($_POST["sex"]) or empty($_POST["city"])) 
 {
@@ -114,13 +78,18 @@ if (empty($_POST["user"]) or empty($_POST["pass"]) or !isset($_POST["sex"]) or e
       <span class="error"><?php echo $passErr;?></span>
 	</div>
 	<div class="col-sm-3"></div>
-  </div></font>
-  <div class="form-group">
-    <div class="col-sm-offset-5 col-sm-5">
-      <button type="submit" class="btn btn-default">Sign in</button>
-    </div>
   </div>
-  <div class="col-sm-offset-5 col-sm-5">Choose your sex:</div>
+  
+  <div class="form-group">
+	<div class="col-sm-3"></div>
+    <label for="id2" class="col-sm-2 control-label">City</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" name="city" maxlength = "15" value="<?php echo $city1;?>" id="id3" placeholder="City">
+      <span class="error"><?php echo $cityErr;?></span>
+	</div>
+	<div class="col-sm-3"></div>
+  </div></font>
+  <font color="white"><div class="col-sm-offset-5 col-sm-5">Choose your sex:</div>
   <div class="col-sm-offset-5 col-sm-5">
   <label class="radio-inline">
   <input type="radio" name="sex" id="inlineRadio1" value="<?php echo sex1;?>Male">Male 
@@ -128,9 +97,23 @@ if (empty($_POST["user"]) or empty($_POST["pass"]) or !isset($_POST["sex"]) or e
   <label class="radio-inline">
   <input type="radio" name="sex" id="inlineRadio2" value="<?php echo sex1;?>Female"> Female
   </label>
+  </div></font>
+  <div class="form-group">
+    <div class="col-sm-offset-5 col-sm-5">
+      <button type="submit" class="btn btn-default">Sign in</button>
+    </div>
   </div>
 </form>
 <style>
+.form-horizontal{
+position: absolute;
+top: 50%;
+margin-top: -60px;
+height: 120px;
+left: 50%;
+margin-left: -300px;
+width: 600px;
+}
 body {
 		background-size : 100%;
 		background: url("LoginBackground.jpg") no-repeat center center fixed ; 
@@ -141,7 +124,9 @@ body {
             bottom: 0;
 			float: left;
             position: absolute;
-			background-color: #000000 ;
+			background-size : 100%;
+			background: url("LoginBackground.jpg") no-repeat center center fixed ; 
+			background-size: cover;
 			font-weight: bold;
 			border-color: #eee;
 			border-left-style: solid;
@@ -151,7 +136,7 @@ body {
 			margin-right: 20%;
 			text-align: center;
         }
-	#user {
+	<!-- #user {
 		position: absolute;
 		top: 275px;
 		left: 700px;
@@ -184,8 +169,8 @@ body {
 		top: 420px;
 		left: 880px;
 		font-size: 125%;
-		color: #FFFFFF;
+		color: #FFFFFF; -->
 	}
 		
 	</style>
-	<div class="jfott"><p><font color= "#FFFFFF">Copyright© Open Text Corporation. All Rights Reserved.</font></p></div>
+	<div class="jfott"><p><font color= "#FFFFFF">Lenny FaCe@HackTUES2015</font></p></div>
