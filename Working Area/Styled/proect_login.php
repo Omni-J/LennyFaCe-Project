@@ -46,12 +46,7 @@ function test_input($data) {
 ?>
 
 <?php include "headerproekt.php"?>
-<form method="post" action="<?php 
-if (empty($_POST["user"]) or empty($_POST["pass"]))
-{
-	echo htmlspecialchars($_SERVER["PHP_SELF"]);
-} else echo "loginproect.php";
-?>">
+<!-- 
 		
 	
 			<p id = "id1">
@@ -67,8 +62,34 @@ if (empty($_POST["user"]) or empty($_POST["pass"]))
 			<p  id = "id3">
 				<input type  = "submit" name = "Submit" value = "Submit">
 			</p>
+</form> -->
+<form method="post" action="<?php 
+if (empty($_POST["user"]) or empty($_POST["pass"]))
+{
+	echo htmlspecialchars($_SERVER["PHP_SELF"]);
+} else echo "loginproect.php";?>">
+<form class="form-horizontal">
+  <div class="form-group">
+    <label for="id1" class="col-sm-2 control-label">Username</label>
+    <div class="col-sm-10">
+      <input type="text" name="user" maxlength = "7" class="form-control" id="id1" value ="<?php echo $name2;?>" placeholder="Username">
+	  <span class="error"><?php echo $nameerr;?></span>
+	</div>
+  </div>
+  <div class="form-group">
+    <label for="id2" class="col-sm-2 control-label">Password</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" name="pass" maxlength="10" value ="<?php echo $pass2;?>" id="id2" placeholder="Password">
+      <span class="error"><?php echo $passerr;?></span>
+	</div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" name = "Submit" value = "Submit" class="btn btn-default">Sign in</button>
+    </div>
+  </div>
 </form>
-<style>
+<!-- <style>
 	#id1 {
 		position: absolute;
 		top: 36%;
@@ -110,6 +131,6 @@ if (empty($_POST["user"]) or empty($_POST["pass"]))
 			margin-right: 20%;
 			text-align: center;
         }
-	</style>
+	</style> -->
 	
 		<div id = "id9" class="jfott"><p><font color= "#FFFFFF">Copyright© Open Text Corporation. All Rights Reserved.</font></p></div>
