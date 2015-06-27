@@ -120,6 +120,15 @@ if (empty($_POST["user"]) or empty($_POST["pass"]) or !isset($_POST["sex"]) or e
       <button type="submit" class="btn btn-default">Sign in</button>
     </div>
   </div>
+  <div class="col-sm-offset-5 col-sm-5">Choose your sex:</div>
+  <div class="col-sm-offset-5 col-sm-5">
+  <label class="radio-inline">
+  <input type="radio" name="sex" id="inlineRadio1" value="<?php echo sex1;?>Male">Male 
+  </label>
+  <label class="radio-inline">
+  <input type="radio" name="sex" id="inlineRadio2" value="<?php echo sex1;?>Female"> Female
+  </label>
+  </div>
 </form>
 <style>
 body {
