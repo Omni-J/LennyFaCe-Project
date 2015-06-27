@@ -63,32 +63,68 @@ function test_input($data) {
 				<input type  = "submit" name = "Submit" value = "Submit">
 			</p>
 </form> -->
-<form method="post" action="<?php 
+<form method="post" class="form-horizontal" action="<?php 
 if (empty($_POST["user"]) or empty($_POST["pass"]))
 {
 	echo htmlspecialchars($_SERVER["PHP_SELF"]);
 } else echo "loginproect.php";?>">
-<form class="form-horizontal">
   <div class="form-group">
-    <label for="id1" class="col-sm-2 control-label">Username</label>
-    <div class="col-sm-10">
+	<div class="col-sm-3"></div>
+    <font color="white"><label for="id1" class="col-sm-2 control-label">Username</label>
+    <div class="col-sm-4">
       <input type="text" name="user" maxlength = "7" class="form-control" id="id1" value ="<?php echo $name2;?>" placeholder="Username">
 	  <span class="error"><?php echo $nameerr;?></span>
 	</div>
+	<div class="col-sm-3"></div>
   </div>
   <div class="form-group">
+	<div class="col-sm-3"></div>
     <label for="id2" class="col-sm-2 control-label">Password</label>
-    <div class="col-sm-10">
+    <div class="col-sm-4">
       <input type="password" class="form-control" name="pass" maxlength="10" value ="<?php echo $pass2;?>" id="id2" placeholder="Password">
       <span class="error"><?php echo $passerr;?></span>
 	</div>
-  </div>
+	<div class="col-sm-3"></div>
+  </div></font>
   <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
+    <div class="col-sm-offset-5 col-sm-7">
       <button type="submit" name = "Submit" value = "Submit" class="btn btn-default">Sign in</button>
     </div>
   </div>
 </form>
+<style>
+.form-horizontal{
+position: absolute;
+top: 50%;
+margin-top: -60px;
+height: 120px;
+left: 50%;
+margin-left: -300px;
+width: 600px;
+}
+body {
+		background-size : 100%;
+		background: url("LoginBackground.jpg") no-repeat center center fixed ; 
+		background-size: cover;
+	}
+	#id9{
+            width: 60%;
+            bottom: 0;
+			float: left;
+            position: absolute;
+			background-size : 100%;
+		background: url("LoginBackground.jpg") no-repeat center center fixed ; 
+		background-size: cover;
+			font-weight: bold;
+			border-color: #eee;
+			border-left-style: solid;
+			border-right-style: solid;
+			border-top-style: solid;
+			margin-left: 20%;
+			margin-right: 20%;
+			text-align: center;
+        }
+</style>
 <!-- <style>
 	#id1 {
 		position: absolute;
@@ -132,5 +168,7 @@ if (empty($_POST["user"]) or empty($_POST["pass"]))
 			text-align: center;
         }
 	</style> -->
+	
+		<div id = "id9" class="jfott"><p><font color= "#FFFFFF">Lenny FaCe@HackTUES2015</font></p></div>
 	
 		<div id = "id9" class="jfott"><p><font color= "#FFFFFF">Lenny FaCe@HackTUES2015</font></p></div>
