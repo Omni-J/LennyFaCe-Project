@@ -45,7 +45,7 @@ function test_input($data) {
 
 ?>
 
-<?php include "headerproekt.php"?>
+
 <!-- 
 		
 	
