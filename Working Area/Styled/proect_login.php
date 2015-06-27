@@ -129,27 +129,27 @@ body {
 	#id1 {
 		position: absolute;
 		top: 36%;
-		left:34%;
+		left: 34%;
 		font-size: 125%;
 		color: #FFFFFF;
 	}
 	#id2 {
 		position: absolute;
-		top:45%;
+		top: 50%;
 		left: 34%;
 		font-size: 125%;
 		color: #FFFFFF;
 	}
 	#id3 {
 		position: absolute;
-		top: 52%;
-		left: 50%;
+		top: 65%;
+		left: 34%;
 		font-size: 150%;
 		color: #FFFFFF;
 	}
 	body {
 		background-size : 100%;
-		background: url("image1.jpg") no-repeat center center fixed ; 
+		background: url("LoginBackground.jpg") no-repeat center center fixed ; 
 		background-size: cover;
 	}
 	#id9{
@@ -169,4 +169,4 @@ body {
         }
 	</style> -->
 	
-		<div id = "id9" class="jfott"><p><font color= "#FFFFFF">Lenny FaCe@HackTUES2015</font></p></div>
+		<div id = "id9" class="jfott"><p><font color= "#FFFFFF">Copyright© Open Text Corporation. All Rights Reserved.</font></p></div>
