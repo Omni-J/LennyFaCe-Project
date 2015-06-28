@@ -16,27 +16,39 @@
 		border-style:solid;
 		border-width: 3px;
 		width:85%;
-		margin-top: 5%;
+		margin-top: 3%;
 		margin-bottom:4%;
 		margin-left:auto;
 		margin-right:auto;
-		padding:4%;
+		padding:3%;
+	}
+	#img {
+		margin-top:2%;
+		margin-bottom:0;
+		text-align:center;
+	}
+	body {
+		background-size : 100%;
+		background: url("LoginBackground.jpg") no-repeat center center fixed ; 
+		background-size: cover;
 	}
 </style>
 </head>
 <body>
+<div id="img">
+	<img src="rsz_lennyface.jpg">
+</div>
 <div class="container">
 <div class="jumbotron text-left">
 <form action="betatest.php" method="POST">
-Type your id :
-<input type="text" name="lastid">
+
 <br><br>
-Type number of question :
-<input 
-type="text" name="broi" >
+TYPE NUMBER OF QUESTION :
+<input type="text" name="broi" >
 <br><br>
-<input type="submit" name="submit" value="Make test">
+<input type="submit" name="submit" value="Make test" class="btn btn-primary">
 </form>
 </div>
 </div>
 </body>
+</html>
