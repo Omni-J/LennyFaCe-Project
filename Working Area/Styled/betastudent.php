@@ -17,11 +17,11 @@
 		border-style:solid;
 		border-width: 3px;
 		width:85%;
-		margin-top: 5%;
+		margin-top: 3%;
 		margin-bottom:4%;
 		margin-left:auto;
 		margin-right:auto;
-		padding:4%;
+		padding:3%;
 	}
 	body {
 		background-size : 100%;
