@@ -45,8 +45,8 @@ foreach	($_POST['questions'] as $question) {
 	
 
 </form>
-<div style="margin:0 auto" align=center>
-<input type="submit" name="submit" value="Ready">
+<div class="col-sm-12 text-center">
+<input class="btn btn-default" name="submit" type="submit" value="Ready">
 </div>
 <body>
 <style>
