@@ -43,6 +43,7 @@
 <form method="POST" action="testready.php" class="form-horizontal">
 <?php
  $connect = mysql_connect("localhost","root","vi98");
+
 	mysql_select_db('edittest');
 	$lastid1 = $_POST['lastid'];
 $count = 1;
@@ -50,10 +51,11 @@ foreach (range(1, $_POST['broi']) as $i) {
 	$az=<<<az
 Type question : $i
 <input type="text" name="questions[$i][question]">
+
 	
-<br class="text-left">
-TIPE ANSWER AND CHECK WEATHER IT IS TRUE OR NOT $i :
-<br>
+Type answer and check true word of question $i:
+<div class="col-sm-4"></div> 
+<div class="col-sm-12 text-left">
 <input type="radio" name="questions[$i][answer]" value="a">A
 <input class="form-control" type="text" name="questions[$i][answer_a]" >
 <input type="radio" name="questions[$i][answer]" value="b">B
@@ -62,17 +64,21 @@ TIPE ANSWER AND CHECK WEATHER IT IS TRUE OR NOT $i :
 <input class="form-control" type="text" name="questions[$i][answer_c]">
 <input type="radio" name="questions[$i][answer]" value="d">D
 <input class="form-control" type="text" name="questions[$i][answer_d]">
-<br>
-<br>
+</div>
+<div class="col-sm-12"></div>
 az;
 echo $az;
 }
+
+
+
 ?>
 <input type="hidden" name="lastid1" value="<?php echo $lastid1 ;?>">
+<div class="text-center">
 <input type="submit" name="submit" value="Ready" class="btn btn-primary">
-</form>
 </div>
 </div>
-
+</div>
 </body>
+</form>
 </html>
