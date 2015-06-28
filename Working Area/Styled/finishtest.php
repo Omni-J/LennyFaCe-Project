@@ -46,14 +46,15 @@ foreach	($_POST['questions'] as $question) {
 
 
 ?>
-<form action="typenum.php" method="POST" id="text">
+<form action="typenum.php" class="col-sm-12 text-center" method="POST" >
+	<font color="white" id="text">	
 	<div>
 	Your test is ready, thank you :)
-	</div> 
+	</div>
+	</font>
 	<br><br>
 	<div>
 	<button type="submit" name="submit" class="btn btn-default" value="Ready">Ready</button>
-	
 	</div>
 	<input type="hidden" name="teacherid1" value="<?php echo $teacherid1 ;?>">
 	<input type="hidden" name="studentid1" value="<?php echo $studentid1 ;?>">
@@ -72,8 +73,7 @@ foreach	($_POST['questions'] as $question) {
 		font-style: italic;
 	 	text-align: center;
 		font-size: 1.875em;
-		/* <-- tva gornoto go gledah ot W3schools --> */
-	}
+	}	
 	
 </style>
 </body>
