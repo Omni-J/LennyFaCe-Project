@@ -15,9 +15,7 @@
 </head>
 <?php
 $connect = mysql_connect("localhost","root","vi98");
-
 	mysql_select_db('edittest');
-
 foreach	($_POST['questions'] as $question) {
  
   
@@ -36,18 +34,20 @@ foreach	($_POST['questions'] as $question) {
 	or die (mysql_error());
  	
 }
-
 ?>
-<form action="uli.html" method="POST" id="text">
-
+<form action="uli.html" method="POST" >
+	<font color="white" id="text">	
+	<div>
 	Your test is generated, your unique id for the test is : 
+	</div>
+	</font>
 	<br><br>
-	
+	<div class="col-sm-12 text-center">
+	<input class="btn btn-default" name="submit" type="submit" value="Ready">
+	</div>
 
 </form>
-<div class="col-sm-12 text-center">
-<input class="btn btn-default" name="submit" type="submit" value="Ready">
-</div>
+
 <body>
 <style>
 	body {
@@ -55,7 +55,6 @@ foreach	($_POST['questions'] as $question) {
 		background: url("LoginBackground.jpg") no-repeat center center fixed ; 
 		background-size: cover;
 	}
-
 	#text{
 		margin-top: 0;
 		border-bottom:0;
