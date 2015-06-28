@@ -24,7 +24,6 @@
 		border-bottom:0;
 		color:#ffffff;
 		font-style: italic;
-	 	text-align: center;
 		font-size: 1.875em;
 	}	
 	
@@ -70,7 +69,7 @@ foreach ($_POST['questions'] as $question) {
 	</font>
 	<br><br>
 	<div>
-	<button type="submit" name="submit" class="btn btn-default" value="Ready">Ready</button>
+	<button type="submit" name="submit" class="btn btn-primary" value="Ready">Ready</button>
 	</div>
 	<input type="hidden" name="teacherid1" value="<?php echo $teacherid1 ;?>">
 	<input type="hidden" name="studentid1" value="<?php echo $studentid1 ;?>">
