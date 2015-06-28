@@ -13,8 +13,24 @@
 
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <!--Bootstrap end-->
+<style>
+	body {
+		background-size : 100%;
+		background: url("LoginBackground.jpg") no-repeat center center fixed ; 
+		background-size: cover;
+	}
+	#text{
+		margin-top: 0;
+		border-bottom:0;
+		color:#ffffff;
+		font-style: italic;
+	 	text-align: center;
+		font-size: 1.875em;
+	}	
+	
+</style>
 </head>
-
+<body>
 <?php
 $connect = mysql_connect("localhost","root","vi98");
 
@@ -23,12 +39,12 @@ $connect = mysql_connect("localhost","root","vi98");
 	$teacherid1 = $_POST['teacherid'];
 	$studentid1 = $_POST['studentid'];
 	
-foreach	($_POST['questions'] as $question) {
+foreach ($_POST['questions'] as $question) {
  
   
   $b = $question['answer'];
   
- $insert2 = "INSERT INTO student (user_id,answer1) " . 
+	$insert2 = "INSERT INTO student (user_id,answer1) " . 
 			"VALUES ('$studentid1', '$b')";
  
  
@@ -59,22 +75,5 @@ foreach	($_POST['questions'] as $question) {
 	<input type="hidden" name="teacherid1" value="<?php echo $teacherid1 ;?>">
 	<input type="hidden" name="studentid1" value="<?php echo $studentid1 ;?>">
 </form>
-<body>
-<style>
-	body {
-		background-size : 100%;
-		background: url("LoginBackground.jpg") no-repeat center center fixed ; 
-		background-size: cover;
-	}
-	#text{
-		margin-top: 0;
-		border-bottom:0;
-		color:#ffffff;
-		font-style: italic;
-	 	text-align: center;
-		font-size: 1.875em;
-	}	
-	
-</style>
 </body>
 </html>
