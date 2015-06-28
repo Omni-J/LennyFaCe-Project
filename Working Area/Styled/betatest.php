@@ -16,22 +16,33 @@
 		border-style:solid;
 		border-width: 3px;
 		width:85%;
-		margin-top: 5%;
+		margin-top: 2%;
 		margin-bottom:4%;
 		margin-left:auto;
 		margin-right:auto;
 		padding:4%;
-
+	}
+	body {
+		background-size : 100%;
+		background: url("LoginBackground.jpg") no-repeat center center fixed ; 
+		background-size: cover;
+	}
+	#Lenny{
+		margin-top: 2%;
+		border-bottom:0;
+		text-align: center;
 	}
 </style>
 </head>
 <body>
+<div id="lenny">
+<img src="rsz_lennyface.jpg">
+</div>
 <div class="container">
 <div class="jumbotron text-left">
 <form method="POST" action="testready.php" class="form-horizontal">
 <?php
  $connect = mysql_connect("localhost","root","vi98");
-
 	mysql_select_db('edittest');
 	$lastid1 = $_POST['lastid'];
 $count = 1;
@@ -39,12 +50,9 @@ foreach (range(1, $_POST['broi']) as $i) {
 	$az=<<<az
 Type question : $i
 <input type="text" name="questions[$i][question]">
-
 	
-
-
 <br class="text-left">
-Type answer and chek true word of question $i :
+TIPE ANSWER AND CHECK WEATHER IT IS TRUE OR NOT $i :
 <br>
 <input type="radio" name="questions[$i][answer]" value="a">A
 <input class="form-control" type="text" name="questions[$i][answer_a]" >
@@ -54,21 +62,17 @@ Type answer and chek true word of question $i :
 <input class="form-control" type="text" name="questions[$i][answer_c]">
 <input type="radio" name="questions[$i][answer]" value="d">D
 <input class="form-control" type="text" name="questions[$i][answer_d]">
-
 <br>
 <br>
-
 az;
 echo $az;
 }
-
-
-
 ?>
 <input type="hidden" name="lastid1" value="<?php echo $lastid1 ;?>">
 <input type="submit" name="submit" value="Ready" class="btn btn-primary">
 </form>
 </div>
 </div>
+
 </body>
 </html>
