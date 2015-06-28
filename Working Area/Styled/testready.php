@@ -1,3 +1,4 @@
+<html>
 <head>
 <meta charset="utf-8">
 
@@ -15,7 +16,18 @@
 </head>
 <?php
 $connect = mysql_connect("localhost","root","vi98");
+
 	mysql_select_db('edittest');
+	$lastid2 = $_POST['lastid1'];
+	if(isset($_POST['submit']))
+	{
+	$rand_id = 1;
+	$inserttest = "INSERT INTO tests (teacher_id) " . 
+			"VALUES (1)";
+	mysql_query($inserttest);
+	
+	$testid = mysql_insert_id();		
+	
 foreach	($_POST['questions'] as $question) {
  
   
@@ -26,14 +38,23 @@ foreach	($_POST['questions'] as $question) {
   $e = $question['answer_c'];
   $f = $question['answer_d'];
   
- $insert1 = "INSERT INTO teacher (question, answer, answer_a, answer_b ,answer_c ,answer_d) " . 
-			"VALUES ('$b','$a','$c','$d','$e','$f' )";
+  
+ $insert1 = "INSERT INTO questions (test_id,question, answer, answer_a, answer_b ,answer_c ,answer_d) " . 
+			"VALUES ('$testid','$b','$a','$c','$d','$e','$f' )";
  
  
 	$result1 = mysql_query($insert1)
 	or die (mysql_error());
  	
 }
+}
+
+	
+	
+
+
+
+
 ?>
 <form action="uli.html" method="POST" >
 	<font color="white" id="text">	
@@ -75,3 +96,4 @@ foreach	($_POST['questions'] as $question) {
 	}
 </style>
 </body>
+</html>
