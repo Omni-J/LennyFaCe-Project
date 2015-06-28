@@ -43,11 +43,11 @@
 
 	mysql_select_db('edittest');
 	
-	$teacherid = $_POST['unique'];
+	$testid = $_POST['unique'];
 	$studentid = $_POST['unique1'];
 	
-	$select = "SELECT * FROM teacher " .
-				"WHERE teacher_id = $teacherid";
+	$select = "SELECT * FROM questions " .
+				"WHERE test_id = $testid";
 				
 	$result = mysql_query($select)
 	or die (mysql_error());
@@ -95,6 +95,7 @@ $question
 	$answer_d
   </label>
 </div>
+
 EOD;
 echo $ti;
 $i++;		
@@ -102,9 +103,8 @@ $i++;
 
 
 ?>
-<input type="hidden" name="teacherid" value="<?php echo $teacherid;?>">
+<input type="hidden" name="teacherid" value="<?php echo $test_id;?>">
 <input type="hidden" name="studentid" value="<?php echo $studentid;?>">
-
 <div class="col-sm-12 text-center">
 <input class="btn btn-primary" name="submit" type="submit" value="Finish Test">
 </div>
